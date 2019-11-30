@@ -19,7 +19,9 @@ var tweets = require('./abstractions/tweets.js');
 app.use(express.static(__dirname + '/public'));
 
 // GET /api/albums
-
+app.get('/api/albums', function(req, res, next){
+    res.json(albums);
+})
 
 // GET /api/circles
 app.get('/api/circles', function(req, res, next){
@@ -27,28 +29,44 @@ app.get('/api/circles', function(req, res, next){
 })
 
 // GET /api/movies
-
+app.get('/api/movies', function(req, res, next){
+    res.json(movies);
+})
 
 // GET /api/nametags
-
+app.get('/api/nametags', function(req, res, next){
+    res.json(nameTags);
+})
 
 // GET /api/poker
-
+app.get('/api/poker', function(req, res, next){
+    res.json(poker);
+})
 
 // GET /api/rectangle
-
+app.get('/api/rectangle', function(req, res, next){
+    res.json(rectangle);
+})
 
 // GET /api/restaurants
-
+app.get('/api/restaurants', function(req, res, next){
+    res.json(restaurants);
+})
 
 // GET /api/students
-
+app.get('/api/students', function(req, res, next){
+    res.json(students);
+})
 
 // GET /api/surveys
-
+app.get('/api/surveys', function(req, res, next){
+    res.json(surveys);
+})
 
 // GET /api/tweets
-
+app.get('/api/tweets', function(req, res, next){
+    res.json(tweets);
+})
 
 app.listen(3000, function(){
     console.log('rendering-api is now listening on port 3000...');
